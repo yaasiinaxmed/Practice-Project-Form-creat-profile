@@ -1,0 +1,233 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800;900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+
+:root {
+    --primary-color: #0077ff;
+}
+
+.container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    padding: 20px 0;
+}
+
+.container .form {
+    width: 420px;
+    padding: 20px;
+    background: #fff;
+    display: flex;
+    flex-direction: column;
+    gap: 45px;
+    box-shadow: 0 0 8px rgba(0,0,0,0.1);
+    border-radius: 4px;
+    position: relative;
+}
+
+.container .form h2 {
+    text-align: center;
+    padding: 18px;
+    color: #222;
+}
+
+.container .form h2 span {
+    color: var(--primary-color);
+}
+
+.container .form .box-input {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+}
+
+.container .form .box-input input {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid rgba(85, 85, 85, 0.123);
+    font-size: 18px;
+    outline: none;
+    border-radius: 4px;
+    transition: border 0.3s;
+}
+
+.container .form .box-input.error input{
+    border: 1px solid #fa1818;
+    outline: none;
+}
+
+.container .form .box-input.succes input{
+    border: 1px solid #48ca48;
+    outline: none;
+}
+
+.container .form .box-input .placeholder {
+    display: block;
+    position: absolute;
+    top: -30px;
+    color: #555;
+    font-size: 18px;
+    pointer-events: none;
+    transition: color 0.2s ease;
+}
+
+.container .form .box-input input:focus {
+    border: none;
+    outline: 2px solid var(--primary-color);
+}
+
+.container .form .box-input.error input:focus {
+    border: none;
+    outline: 2px solid #fa1818;
+}
+
+.container .form .box-input.succes input:focus {
+    border: none;
+    outline: 2px solid #48ca48;
+}
+
+.container .form .box-input input:focus + .placeholder {
+    color: var(--primary-color);
+}
+
+.container .form .box-input.error input:focus + .placeholder {
+    color: #fa1818;
+}
+
+.container .form .box-input.succes input:focus + .placeholder {
+    color: #48ca48;
+}
+
+.container .form .box-input i {
+    position: absolute;
+    top: 13px;
+    right: 10px;
+    font-size: 18px;
+    visibility: hidden;
+}
+
+.container .form .box-input .bi-check2 {
+    color: #48ca48;
+}
+
+.container .form .box-input .bi-exclamation-circle-fill {
+    color: #e01818;
+    font-size: 22px;
+    top: 9.8px;
+}
+
+.container .form .box-input .msg {
+   padding-top: 5px;
+   display: none;
+}
+
+.container .form .box-input.error .msg {
+    display: block;
+    color: #e01818;
+}
+
+.container .form .file {
+    display: none;
+}
+
+.container .form #img {
+    width: 25%;
+    height: 90px;
+    border-radius: 50%;
+    position: relative;
+    top: -25px;
+}
+
+.container .form .box-img {
+    width: 150px;
+    position: absolute;
+    bottom: 10.5rem;
+    left: 16rem;
+}
+
+.container .form #upload {
+    background: var(--primary-color);
+    width: 150px;
+    padding: 12px 14px; 
+    color: white;
+    cursor: pointer;
+    transition: 0.3s ease;
+}
+
+.container .form #upload:hover {
+    background: transparent;
+    border: 2px solid var(--primary-color);
+    color: var(--primary-color);
+}
+
+.container .form button {
+    padding: 12px 15px;
+    border: none;
+    background: white;
+    font-size: 18px;
+    color: var(--primary-color);
+    font-weight: 600;
+    box-shadow: 0 0 4px #021bff;
+    position: relative;
+    bottom: 15px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.container .form button:hover {
+    background: var(--primary-color);
+    color: white;
+}
+
+.profile {
+    width: 300px;
+    box-shadow: 0 0 8px rgba(0,0,0,0.1);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 20px;
+}
+
+.profile h2 {
+    font-size: 1.8em;
+    color: #222;
+    padding: 20px;
+    text-align: center;
+}
+
+.profile h2 span {
+    color: var(--primary-color);
+}
+
+.profile .content {
+    text-align: center;
+}
+
+.profile .content img {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    margin-bottom: 15px;
+}
+
+.profile .content h3 {
+    font-size: 22px;
+    color: #222;
+}
+
+.profile .content h3 span {
+    color: var(--primary-color);
+}
+
+.profile .content p {
+    font-size: 18px;
+    font-weight: 500;
+    padding-bottom: 15px;
+}
